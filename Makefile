@@ -1,5 +1,7 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra -Wpedantic -O2 -g
+#-DENABLE_LOGGING
+CXXFLAGS = -DENABLE_LOGGING -std=c++17 -Wall -Wextra -Wpedantic -O2 -g
+DEPFLAGS = -MMD -MP
 
 BUILD_DIR = build
 
@@ -36,3 +38,5 @@ info:
 	@echo Sources: $(SOURCES)
 	@echo Objects: $(OBJECTS)
 	@echo Target: $(TARGET)
+
+-include $(DEPS)

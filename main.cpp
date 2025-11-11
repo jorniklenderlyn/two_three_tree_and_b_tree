@@ -5,8 +5,10 @@
 
 
 int main() {
-    TestTwoThreeTree test;
-    test.RunTests();
+    // TestTwoThreeTree test;
+    // test.RunTests();
+    TestBTree<int, 5> test;
+    test.RunAllTests();
     // TwoThreeTree<int> tree;
     // tree.Insert(10);
     // tree.Insert(20);
